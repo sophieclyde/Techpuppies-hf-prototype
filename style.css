@@ -1,8 +1,31 @@
+.previousMargin{
+  margin-left: 50px;
+}
+#classInfoText {
+  font-style: Helvetica;
+  font-weight: bold;
+  color: #90caf9;
+}
+
+#classText {
+  font-style: Helvetica;
+  font-weight: bold;
+  color: black;
+}
+
+.classDescriptionLeft{
+  margin-left: 180px;
+}
+
 #page-header{
   text-align: center;
   font-family: helvetica;
   font-weight:bold;
-  color: #002171;
+  color: #0d47a1;
+}
+
+.classLeftAlign {
+  margin-left: 185px;
 }
 
 #big-table {
@@ -16,7 +39,7 @@
 }
 
 #navigation-background {
-  background-color: blue;
+  background-color: #0d47a1;
 }
 
 #navigationText {
@@ -85,6 +108,9 @@
 
 }
 
+.course-browser-stripe{
+  background-color:#90caf9;
+}
 #saved-courses-stripe{
   background-color: #90caf9;
 }
