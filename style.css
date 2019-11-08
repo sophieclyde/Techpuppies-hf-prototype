@@ -1,7 +1,7 @@
 
 #navText {
-color: white;
-font-family: Helvetica;
+  color: white;
+  font-family: Helvetica;
 }
 
 #page-header {
@@ -41,8 +41,28 @@ font-family: Helvetica;
   font-size: 20px;
   color: white;
 }
-
-
-.nav-link:hover, .nav-link:focus {
-  text-decoration: none;
+a:hover {
+  border-bottom: 3px solid white;
 }
+
+a.active {
+  border-bottom: 3px solid white;
+}
+
+#login_button {
+  font-family: helvetica;
+  color: white;
+}
+
+#Home_Text {
+  color: black;
+  text-align: center;
+  font-family: helvetica;
+  font-weight:bold;
+
+
+.table {
+   margin: auto;
+   width: 50% 
+}
+

@@ -22,12 +22,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">	
       <li class="nav-item">
-        <a class="nav-link active" href="Home.html" id="navText">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="Home.html" id="navText">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="planning_page.html" id="navText">Planning</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="registration.html" id="navText">Registration</a>
       </li>
     </ul>
@@ -42,30 +42,69 @@
 
 </nav>
 
- 
-<div class="jumbotron text-center">
-  <h1 id="Home_Text">Welcome to Wellesley Registration!</h1> 
+<br>
+
+  <h1 id="page-header">Current Registration</h1>
+  <br>
+
+
+
+<div class="container">
+  <h4 id="page-header">Classes Currently Enrolled in:</h4>           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Course Title</th>
+        <th>Meeting Time</th>
+        <th>Instructor</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr> 
+        <td>BISC 110-01 Exploration of Organismal Biology with Laboratory</td>
+        <td>MR 8:30 - 9:50</td>
+        <td>G.Mendel</td>
+        <td><div class="checkbox">
+      			<label><input type="checkbox" value=""></label>
+    		</div>
+    	</td>
+      </tr>
+      <tr>
+        <td>BISC 110-L01 Laboratory for BISC 110 and BISC 112</td>
+        <td>M 6:30 - 9:30</td>
+        <td>G.Mendel</td>
+        <td><div class="checkbox">
+      			<label><input type="checkbox" value=""></label>
+    		</div>
+        </td>
+      </tr>
+      <tr>
+        <td>MATH 115-01 Calculus I</td>
+        <td>TWF 8:30 - 9:50</td>
+        <td>R.Franklin</td>
+        <td><div class="checkbox">
+      			<label><input type="checkbox" value=""></label>
+    		</div>
+        </td>
+      </tr>
+      <tr>
+        <td>HIST 277-01 China and America</td>
+        <td>TF 9:55 - 11:00</td>
+        <td>A.Lincoln</td>
+        <td><div class="checkbox">
+      			<label><input type="checkbox" value=""></label>
+    		</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-  
-<div class="container" id="Category_Text">
-  <div class="row">
-    <div class="col-sm-6">
-      <h2>Information</h2>
-      <button type="button" class="btn btn-primary btn-lg">General Information</button>
-      <h1>  </h1>    
-      <button type="button" class="btn btn-primary btn-lg">Frequently Asked Questions</button>
-      <h1>  </h1>
-      <button type="button" class="btn btn-primary btn-lg">Advising Resources</button>
-      <h1>  </h1>
-	</div>
-	
-    <div class="col-sm-6">
-      <h2>Requirements</h2>        
-      <a href="major.html"><button type="button" class="btn btn-primary btn-lg">Major/Minor Requirements</button></a>
-      <h1>  </h1>    
-      <a href="distribution.html"><button type="button" class="btn btn-primary btn-lg">Distribution Requirements</button></a>
-    </div>
-  </div>
+
+<div class="container">
+
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="Button_Text">Drop Course</button>
+
 </div>
 
 

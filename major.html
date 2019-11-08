@@ -12,16 +12,17 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#0d47a1">
-  <a class="navbar-brand" id="navText"  href="#">Wellesley Registration</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#0d47a1">
+  <img src="logo.png" class="img-responsive" alt="logo" height="40">	
+  <a class="navbar-brand" id="navText">Registration</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="Home.html" id="navText">Home <span class="sr-only">(current)</span></a>
+    <ul class="navbar-nav mr-auto">	
+      <li class="nav-item">
+        <a class="nav-link active" href="Home.html" id="navText">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="planning_page.html" id="navText">Planning</a>
@@ -30,11 +31,15 @@
         <a class="nav-link" href="registration.html" id="navText">Registration</a>
       </li>
     </ul>
+	
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
+  <div class="text-right">
+   <button type="button" class="btn btn-secondary"><a href="idpassword.html" id="login_button"> Log-In</a></button>
+
 </nav>
 
 <br>
@@ -42,16 +47,20 @@
   <h1 id="page-header">Major/Minor Requirements</h1>
   <br>
 
+
 <div class="container">
-  <h2 id="Category_Text">Academic Departments</h2>          
-  <table class="table">
+  <br>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <h3 id="Category_Text">Academic Departments</h3>          
+  <table class="table" id ="Text">
     <thead>
       <tr>
-        <th id="Category_Text">A - F</th>
-        <th id="Category_Text">G - Z</th>
+        <th>A - F</th>
+        <th>G - Z</th>
       </tr>
     </thead>
-    <tbody id="Text">
+    <tbody id="myTable">
       <tr>
         <td>Africana Studies Department</td>
         <td>Geosciences Department</td>
@@ -171,7 +180,7 @@
     </tbody>
   </table>
 
-  <h2 id="Category_Text">Languages not Listed Above</h2>
+  <h3 id="Category_Text">Languages not Listed Above</h3>
   <table class="table">
     <tbody id="Text">
       <tr>
@@ -205,7 +214,7 @@
     </tbody>
   </table>
       	
-  <h2 id="Category_Text">Individual Majors</h2>
+  <h3 id="Category_Text">Individual Majors</h3>
   <p>Occasionally an individually designed major is appropriate, with approval from advisors and deans.</p>            
   <table class="table">
     <tbody id="Text">
@@ -219,4 +228,16 @@
   </table>
 </div>
 
-<body>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
