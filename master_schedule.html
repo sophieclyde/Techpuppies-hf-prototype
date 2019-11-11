@@ -8,39 +8,46 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="rebecca_style.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css">
 
     <title>Long-Term Planning</title>
   </head>
 	<body>
-    <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg navbar-light" id = "navigation-background">
-        <a class="navbar-brand" id="navigationText" href="Home.html" >Wellesley Registration</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="Home.html" id = "navigationText">Information<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="planning_page.html" id = "navigationText">Planning</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="registration.html" id = "navigationText">Registration</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id = "navigationText">Search</button>
-            </form>
-            <div class="btn-toolbar">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id = "navigationText">Log In</button>
-            </div>
-          </div>
-      </nav>
+      <a class="navbar-brand" id="navigationText" href="#" >Wellesley</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" id = "navigationText">Information<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="planning_page.html" id = "navigationText">Planning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id = "navigationText">Registration</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#"></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id = "navigationText">Search</button>
+          </form>
+        </div>
+    </nav>
 <br>
 
 <h1 id="page-header">Long-Term Planning</h1>
@@ -60,21 +67,7 @@
           <a class = "dropdown-item dropdown-padding dropdown-tall" id = "classText" href="#">BSIC 110 - F/<a>
         </div>
     </div>
-  </div>
-
-  <div class = "col-lg-6 col-md-6 col-sm-6 dropdown-center">
-    <div class = "flex-container">
-      <table id="table-border">
-        <tr>
-          <td id="tableText" class="dropdown-padding course-browser-stripe">Course Browser</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
-<br>
-<div class = "row">
-  <div class = "col-lg-6 col-md-6 col-sm-6 dropdown-center">
+    <br>
     <div class="dropdown">
       <button id = "navigation-background" class = "btn btn-secondary dropdown-padding dropdown-tall dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Semester 2
@@ -86,18 +79,7 @@
           <a class = "dropdown-item dropdown-padding dropdown-tall" id = "classText" href="#">Class</a>
         </div>
     </div>
-  </div>
-  <div class = "col-lg-6 col-md-6 col-sm-6 dropdown center">
-    <form class="form-inline md-form form-sm mt-0">
-      <i class="fas fa-search" aria-hidden="true"></i>
-      <input class="form-control form-control-sm ml-5 w-50" type="text" placeholder="Search"
-    aria-label="Search">
-    </form>
-  </div>
-</div>
-<br>
-<div class = "row">
-  <div class = "col-lg-6 col-md-6 col-sm-6 dropdown-center">
+    <br>
     <div class="dropdown">
       <button id = "navigation-background" class = "btn btn-secondary dropdown-padding dropdown-tall dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Semester 3
@@ -110,7 +92,56 @@
         </div>
     </div>
   </div>
-</div>
+  <div class = "col-lg-6 col-md-6 col-sm-6 dropdown-center">
+    <table id="table-border">
+      <tr>
+        <td id="tableText" class="dropdown-padding course-browser-stripe">Course Browser</td>
+      </tr>
+      <tr>
+        <td>
+          <form class="form-inline md-form form-sm mt-0">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input class="form-control form-control-sm ml-5 w-50" type="text" placeholder="Search"
+          aria-label="Search">
+          </form>
+        </td>
+      </tr>
+    </table>
+    <table class = "table-striped">
+      <tr>
+        <td class = "coursebrowser-width dropdown-tall">
+          Class
+        </td>
+      </tr>
+      <tr>
+        <td class = "coursebrowser-width dropdown-tall">
+          Class
+        </td>
+      </tr>
+      <tr>
+        <td class = "coursebrowser-width dropdown-tall">
+          Class
+        </td>
+      </tr>
+      <tr>
+        <td class = "coursebrowser-width dropdown-tall">
+          Class
+        </td>
+      </tr>
+      <tr>
+        <td class = "coursebrowser-width dropdown-tall">
+          Class
+        </td>
+      </tr>
+    </table>
+
+
+  </div>
+
+</div> <!--row-->
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
