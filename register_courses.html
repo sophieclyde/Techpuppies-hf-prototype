@@ -33,10 +33,10 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id = "navigationText">Search</button>
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id ="navigationText">Search</button>
             </form>
             <div class="btn-toolbar">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id = "navigationText">Log In</button>
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id ="navigationText">Log In</button>
             </div>
           </div>
       </nav>
@@ -223,52 +223,52 @@
     </tr>
   </thead>
   <tr>
-    <td id = "tableText">ENG 112-01 | MR 9:55-11:00 | S. Plath</td>
+    <td id = "pos1"></td>
     <td>
       <form>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked">
+          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('pos1').innerHTML)">
         </div>
       </form>
     </td>
   </tr>
   <tr>
-    <td id = "tableText">HIST 277-01 | TF 9:55-11:00 | A. Lincoln</td>
+    <td id = "pos2"></td>
     <td>
       <form>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked">
+          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('pos2').innerHTML)">
         </div>
       </form>
     </td>
   </tr>
   <tr>
-    <td id = "tableText">MATH 115-01 | TWF 8:30-9:50 | R. Franklin</td>
+    <td id = "pos3"></td>
     <td>
       <form>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked">
+          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('pos3').innerHTML)">
         </div>
       </form>
     </td>
   </tr>
   <tr>
-    <td id = "tableText">BISC 111-01 | MR 8:30-9:50 | G. Mendel</td>
+    <td id = "pos4"></td>
     <td>
       <form>
         <form>
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+            <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('pos4').innerHTML)">
           </div>
         </form>
     </td>
   </tr>
   <tr>
-    <td id = "tableText">BISC 111-L01 | M 6:30-9:30 | G. Mendel</td>
+    <td id = "pos5"></td>
     <td>
       <form>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked">
+          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('pos5').innerHTML)">
         </div>
       </form>
     </td>
@@ -285,22 +285,52 @@
     </tr>
   </thead>
   <tr>
-    <td id = "tableText">BISC 111-01 | TF 8:30 - 9:50 | D.Ellerby</td>
+    <td id = "sav1"></td>
     <td>
       <form>
         <form>
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+            <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav1').innerHTML)">
           </div>
         </form>
     </td>
   </tr>
   <tr>
-    <td id = "tableText">ANTH 103-01 | MR 9:55 - 11:10 | E.Minor</td>
+    <td id = "sav2"></td>
     <td>
       <form>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked">
+          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav2').innerHTML)">
+        </div>
+      </form>
+    </td>
+  </tr>
+    <tr>
+    <td id = "sav3"></td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav3').innerHTML)">
+        </div>
+      </form>
+    </td>
+  </tr>
+    <tr>
+    <td id = "sav4"></td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav4').innerHTML)">
+        </div>
+      </form>
+    </td>
+  </tr>
+    <tr>
+    <td id = "sav5"></td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav5').innerHTML)">
         </div>
       </form>
     </td>
@@ -309,9 +339,92 @@
 </div>
 
 <div class = "col-xl-10 col-lg-11 col-md-12 col-sm-12 col-12" id = "big-table">
-<button type = "submit" class = "btn btn-primary btn-block" style = "align-center" id = "ssButtonText">Register for Selected Courses</button>
+<button type = "submit" class = "btn btn-primary btn-block" style = "align-center" id = "ssButtonText" onclick = "registerForCourses()">Register for Selected Courses</button>
 </div>
 
+    <script>
+        window.onload = displaySavedScheduleAndCourses();
+        
+        function displaySavedScheduleAndCourses(){
+            if (window.sessionStorage.getItem("savedSchedule") != null){
+                var savedSchedule = window.sessionStorage.getItem("savedSchedule").split(",");
+                savedSchedule.sort();
+            } else{
+                console.log("No Saved Schedule");
+                var savedSchedule = new Array(0);
+            }
+            if (window.sessionStorage.getItem("savedCourses") != null){
+                var savedCourses = window.sessionStorage.getItem("savedCourses").split(",");
+                savedCourses.sort();
+            } else{
+                console.log("No Saved Courses");
+                var savedCourses = new Array(0);
+            }
+            for (var i = 0; i < 5; i++){
+                if (i < savedSchedule.length){
+                    document.getElementById("pos" + (i+1)).innerHTML = savedSchedule[i];
+                } else{
+                    if (savedSchedule.length > 0){
+                        document.getElementById("pos" + (i+1)).innerHTML = "N/a";
+                    } else{
+                        document.getElementById("pos" + (i+1)).innerHTML = "No Saved Schedule";
+                    }
+                }
+            }
+            
+            for (var i = 0; i < 5; i++){
+                if (i < savedCourses.length){
+                    if (savedSchedule.indexOf(savedCourses[i]) == -1){
+                        document.getElementById("sav" + (i+1)).innerHTML = savedCourses[i];
+                    } else{
+                        document.getElementById("sav" + (i+1)).innerHTML = "No Saved Course";
+                    }
+                } else{
+                    document.getElementById("sav" + (i+1)).innerHTML = "No Saved Course";
+                }
+            }
+        }
+        
+        var registerCourses = new Array(0);
+    
+        function addCourse(courseName){
+            if (registerCourses.indexOf(courseName) != -1){
+                registerCourses.splice(registerCourses.indexOf(courseName),1);
+            } else{
+                registerCourses.push(courseName);
+            }
+            console.log(registerCourses);
+        }
+    
+        function registerForCourses() {
+            var savedList = "\n";
+            for (var i = 0; i < registerCourses.length; i++) {
+                savedList = savedList + "\n" + registerCourses[i];
+            }
+            var c = confirm("Do you want to register for these courses?" + savedList);
+            if (c==true){
+                if (registerCourses.length > 3){
+                    var registeredCourses = registerCourses.slice(0,3);
+                } else{
+                    var registeredCourses = registerCourses.slice(0);
+                }
+                savedList = "\n";
+                for (var i = 0; i < registeredCourses.length; i++) {
+                    savedList = savedList + "\n" + registeredCourses[i];
+                    }
+                alert("You have succesfully registered for these courses:" + savedList + "\n\nIf you wish to register for more courses, click the checkbox next to that course and hit the register button again. You can see and edit your registered courses on the Current Registration page.");
+                if (window.sessionStorage.getItem("registeredCourses") != null){
+                    registeredCourses = registeredCourses.concat(window.sessionStorage.getItem("registeredCourses"));
+                }
+                if (typeof(Storage) !== "undefined") {
+                    // Store
+                    window.sessionStorage.setItem("registeredCourses", registeredCourses);
+                } else {
+                    document.getElementById("result").innerHTML = "Your browser does not support Web Storage...";
+                }
+                }
+            }
+    </script>
 
 
 </body>

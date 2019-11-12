@@ -251,7 +251,7 @@
       <form>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="materialUnchecked"
-                 onclick="addCourse(document.getElementById('Example2').innerHTML)">
+                 onclick="addCourse(document.getElementById('Example3').innerHTML)">
         </div>
       </form>
     </td>
@@ -337,18 +337,12 @@
         var savedSchedule = new Array(0);
     
         function addCourse(courseName){
-//            if (savedSchedule.indexOf(courseName) == -1){
-//                 console.log(courseName);
-//                 savedSchedule.push(courseName);
-//            } else{
-//                if (savedSchedule.length >=1){
-//                    savedSchedule.slice(savedSchedule.indexOf(courseName, 1));
-//                }else{
-//                    savedSchedule = new Array(0);
-//                 }
-//            }
-//            savedSchedule.sort();
-            savedSchedule.push(courseName);
+            if (savedSchedule.indexOf(courseName) != -1){
+                savedSchedule.splice(savedSchedule.indexOf(courseName),1);
+            } else{
+                savedSchedule.push(courseName);
+            }
+            console.log(savedSchedule);
         }
     
         function saveSchedule() {
@@ -356,7 +350,7 @@
             for (var i = 0; i < savedSchedule.length; i++) {
                 savedList = savedList + "\n" + savedSchedule[i];
             }
-            var c = confirm("Do you want to save these courses as a saved schedule?" + savedList);
+            var c = confirm("Do you want to save these courses as your saved schedule?" + savedList);
             if (c==true){
                 if (typeof(Storage) !== "undefined") {
                     // Store

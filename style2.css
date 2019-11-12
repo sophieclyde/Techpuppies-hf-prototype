@@ -7,7 +7,7 @@
   color: #0d47a1;
 }
 
-#classText {
+#classText, #classText1, #classText2, #classText3, #classText4 {
   font-style: Helvetica;
   font-weight: bold;
   color: black;
@@ -142,3 +142,21 @@
    padding-top:20px;
    padding-bottom:20px;
  }
+
+#page-header{
+  text-align: center;
+  font-family: helvetica;
+  font-weight:bold;
+  color: #002171;
+}
+
+#newSemester {
+    position: fixed;
+    height: 40px;
+    width: 400px;
+    bottom: 10px;
+}
+
+#chooseSemester{
+    color: blue;
+}

@@ -158,30 +158,38 @@
     var savedCourses = new Array(0);
     
     function addCourse(courseName){
-        savedCourses.push(courseName);
+        if (savedCourses.indexOf(courseName) != -1){
+            savedCourses.splice(savedCourses.indexOf(courseName),1);
+        } else{
+            savedCourses.push(courseName);
+        }
+        console.log(savedCourses);
     }
     
     function saveCourses() {
         var savedList = "\n";
         for (var i = 0; i < savedCourses.length; i++) {
-            savedList = savedList + "\n" + "*" + savedCourses[i];
+            savedList = savedList + "\n" + savedCourses[i];
         }
         var c = confirm("Do you want to save these courses?" + savedList);
         if (c==true){
-            if (typeof(Storage) !== "undefined") {
-  		        // Store
-  		        window.sessionStorage.setItem("savedCourses", savedCourses);
-            } else {
-  		        document.getElementById("result").innerHTML = "Your browser does not support Web Storage...";
-	       }
+                if (window.sessionStorage.getItem("savedCourses") != null){
+                    savedCourses = savedCourses.concat(window.sessionStorage.getItem("savedCourses"));
+                }
+                if (typeof(Storage) !== "undefined") {
+                    // Store
+                    window.sessionStorage.setItem("savedCourses", savedCourses);
+                } else {
+                    document.getElementById("result").innerHTML = "Your browser does not support Web Storage...";
+                }
 
             alert("You have saved these courses:" + savedList + "\n\nYou can see them on the Semester Schedule and Registration pages.")
         }
     }
     </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

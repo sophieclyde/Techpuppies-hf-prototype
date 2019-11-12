@@ -153,7 +153,12 @@
         
         function dropCourse(courseName){
             if (courseName != null){
-                 coursesToDrop.push(courseName);
+                if (coursesToDrop.indexOf(courseName) != -1){
+                    coursesToDrop.splice(coursesToDrop.indexOf(courseName),1);
+                } else{
+                    coursesToDrop.push(courseName);
+                }
+                console.log(coursesToDrop);
             }
         }
         
@@ -174,16 +179,13 @@
                 }
                 
                 var newCourseList = registeredCourses;
-                console.log(newCourseList);
                 
                 for(i=0; i< coursesToDrop.length; i++){
                     if (newCourseList.indexOf(coursesToDrop[i]) != -1){
                         if ((newCourseList.indexOf(coursesToDrop[i])==0) && (newCourseList.length==1)){
                             newCourseList= new Array(0);
                         } else{
-                            console.log("Dropped " + coursesToDrop[i] + "from position " + newCourseList.indexOf(coursesToDrop[i]));
-                            newCourseList = registeredCourses.slice(registeredCourses.indexOf(coursesToDrop[i]), 1);
-                            console.log(newCourseList);
+                            newCourseList.splice(registeredCourses.indexOf(coursesToDrop[i]), 1);
                         }
                     }
                 }
