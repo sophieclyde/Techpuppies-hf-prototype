@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="rebecca_style2.0.css">
+    <link rel="stylesheet" href="style2.0.css">
+    <link rel="stylesheet" href="style2.2.0.css">
+
+
+    <title>Course Browser</title>
+  </head>
+  <body>
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-lg navbar-light" id = "navigation-background">
+        <a class="navbar-brand" id="navigationText" href="Home2.0.html" >Wellesley Registration</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="Home2.0.html" id = "navigationText">Information<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="planning_page2.0.html" id = "navigationText">Planning</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="registration2.0.html" id = "navigationText">Registration</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id = "navigationText">Search</button>
+            </form>
+            <div class="btn-toolbar">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id = "navigationText">Log In</button>
+            </div>
+          </div>
+      </nav>
+<br>
+      <a href="planning_page2.0.html" class="previous previousMargin" id="tableText">&laquo; Previous</a>
+      
+      <h1 id="page-header">Semester Schedule Planner</h1>
+<br>
+
+<!--FilterableDropDown-->
+<div class = "row">
+  <div class = "col-lg-6 col-md-6 col-sm-6 dropdown-right">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id= "courseDropdown">Filter Category
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <li><a onclick="document.getElementById('courseDropdown').innerHTML='Department';" href="#" ;>Department</a></li>
+      <li><a a onclick="document.getElementById('courseDropdown').innerHTML='Time';" href="#" ;>Time</a></li>
+      <li><a a onclick="document.getElementById('courseDropdown').innerHTML='Instructor';" href="#" ;>Instructor</a></li>
+      <li><a onclick="document.getElementById('courseDropdown').innerHTML='Distribution Requirement';" href="#" ;>Distribution Requirement</a></li>
+      <li><a a onclick="document.getElementById('courseDropdown').innerHTML='Location';" href="#" ;>Location</a></li>
+    </ul>
+  </div>
+  </div>
+  <div class = "col-lg-6 col-md-6 col-sm-6 dropdown-left">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="extraDropDown">Name
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <li><a onclick="document.getElementById('extraDropDown').innerHTML='Anthropology';"href="#">Anthropology</a></li>
+      <li><a onclick="document.getElementById('extraDropDown').innerHTML='Biology';"href="#"href="#">Biology</a></li>
+      <li><a onclick="document.getElementById('extraDropDown').innerHTML='Computer Science';"href="#"href="#">Computer Science</a></li>
+      <li><a onclick="document.getElementById('extraDropDown').innerHTML='Chemistry';"href="#"href="#">Chemistry</a></li>
+      <li><a onclick="document.getElementById('extraDropDown').innerHTML='Data Sciences';"href="#"href="#">Data Sciences</a></li>
+      <li><a onclick="document.getElementById('extraDropDown').innerHTML='East Asian Studies';"href="#"href="#">East Asian Studies</a></li>
+      </ul>
+  </div>
+</div>
+</div>
+
+<br>
+
+<!--Class Table-->
+<div class = "col-lg-10 col-md-10 col-sm-10" id=  "big-table">
+<table  class="table table-striped" id= "table-border">
+  <tr>
+    <td id="tableText"><a href= "class_information2.0.html">BISC 110-01 | MR 8:30-9:50 | G. Mendel</a></td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" onclick= "addCourse('BISC 110-01 | MR 8:30-9:50 | G. Mendel');" class="form-check-input" id="materialUnchecked">
+        </div>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td id = "tableText"> BISC 110-L01 | MR 6:30-9:30 | G. Mendel</td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" onclick= "addCourse('BISC 110-L01 | MR 6:30-9:30 | G. Mendel');" class="form-check-input" id="materialUnchecked">
+        </div>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td id = "tableText">BISC 219-01 | MR 8:30-9:50 | G. Mendel</td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" onclick= "addCourse('BISC 219-01 | MR 8:30-9:50 | G. Mendel');" class="form-check-input" id="materialUnchecked">
+        </div>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td id = "tableText">BISC 230-01 | MR 12:45-2:00 | G. Beatle</td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" onclick= "addCourse('BISC 230-01 | MR 12:45-2:00 | G. Beatle');" class="form-check-input" id="materialUnchecked">
+        </div>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td id = "tableText">BISC 300-01 | W 6:30-9:30 | C. Darwin</td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" onclick= "addCourse('BISC 300-01 | W 6:30-9:30 | C. Darwin');" class="form-check-input" id="materialUnchecked">
+        </div>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td id = "tableText">BISC 335-01 | M 8:30-12:45 | C. Darwin</td>
+    <td>
+      <form>
+        <div class="form-check">
+          <input type="checkbox" onclick= "addCourse('BISC 335-01 | M 8:30-12:45 | C. Darwin');" class="form-check-input" id="materialUnchecked">
+        </div>
+      </form>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<div class = "col-xl-10 col-lg-11 col-md-12 col-sm-12 col-12" id = "big-table">
+<button type = "submite" class = "btn btn-primary btn-block" style = "align-center" id = "ssButtonText" onclick = "saveCourses();">Add to Saved Courses</button>
+</div>
+
+<script>
+    var savedCourses = new Array(0);
+    
+    function addCourse(courseName){
+        if (savedCourses.indexOf(courseName) != -1){
+            savedCourses.splice(savedCourses.indexOf(courseName),1);
+        } else{
+            savedCourses.push(courseName);
+        }
+        console.log(savedCourses);
+    }
+    
+    function saveCourses() {
+        var savedList = "\n";
+        for (var i = 0; i < savedCourses.length; i++) {
+            savedList = savedList + "\n" + savedCourses[i];
+        }
+        var c = confirm("Do you want to save these courses?" + savedList);
+        if (c==true){
+                if (window.sessionStorage.getItem("savedCourses") != null){
+                    savedCourses = savedCourses.concat(window.sessionStorage.getItem("savedCourses"));
+                }
+                if (typeof(Storage) !== "undefined") {
+                    // Store
+                    window.sessionStorage.setItem("savedCourses", savedCourses);
+                } else {
+                    document.getElementById("result").innerHTML = "Your browser does not support Web Storage...";
+                }
+
+            alert("You have saved these courses:" + savedList + "\n\nYou can see them on the Semester Schedule and Registration pages.")
+        }
+    }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

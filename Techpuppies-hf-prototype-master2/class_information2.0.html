@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "rebecca_style2.0.css">
+    <link rel="stylesheet" href="style2.0.css">
+    <link rel="stylesheet" href="style2.2.0.css">
+    <title>Class Info</title>
+  	</head>
+    
+  	<body>
+      <nav class="navbar navbar-expand-lg navbar-light" id = "navigation-background">
+        <a class="navbar-brand" id="navigationText" href="Home.html" >Wellesley Registration</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="Home.html" id = "navigationText">Information<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="planning_page.html" id = "navigationText">Planning</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="registration.html" id = "navigationText">Registration</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id = "navigationText">Search</button>
+            </form>
+            <div class="btn-toolbar">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id = "navigationText">Log In</button>
+            </div>
+          </div>
+      </nav>
+<br>
+
+  <a href="course_browser.html" class="previous previousMargin" id="tableText">&laquo; Previous</a>
+
+<h1 id = "page-header">BISC 110: 01</h1>
+<h2 id = "page-header">Introductory Cellular and Molecular Biology with Laboratory</h2>
+
+<br>
+<br>
+
+<table class = "classLeftAlign">
+  <tr>
+    <td id = "classInfoText">Instructor:</td>
+    <td></td>
+    <td id = "classText">G. Mendel</td>
+  </tr>
+  <tr>
+    <td id = "classInfoText">Time:</td>
+    <td></td>
+    <td id = "classText">Monday/Thursday 8:30-9:50 AM</td>
+  </tr>
+  <tr>
+    <td id = "classInfoText">Credit Hours:</td>
+    <td></td>
+    <td id = "classText">1.25</td>
+  </tr>
+  <tr>
+    <td id = "classInfoText">Prerequisites:</td>
+    <td></td>
+    <td id = "classText">Quantitative Reasoning</td>
+  </tr>
+  <tr>
+    <td id = "classInfoText">Distributions:</td>
+    <td></td>
+    <td id = "classText">LAB/NPS</td>
+  </tr>
+</table>
+
+<br>
+<br>
+<div class = "col-lg-9 col-md-9 col-sm-9 classDescriptionLeft">
+  <p id = "classText">
+    A gateway course that focuses on the study of life at the cellular and
+    molecular level, including eukaryotic and prokaryotic cell structure,
+    function of biological macromolecules, cellular metabolism, molecular
+    genetics, and mechanisms of growth and differentiation. This course will
+    provide the fundamental tools for exploration of this field with the aim of
+    enhancing conceptual understanding. Laboratories focus on experimental
+    approaches to these topics and are shared with BISC 112. Either
+    BISC 110/BISC 112/BISC 116 or BISC 111/BISC 111T/BISC 113 may be taken
+    first. Students must attend lab during the first week in order to continue
+    in the course.
+  </p>
+</div>
+<br>
+
+<div class = "col-xl-10 col-lg-11 col-md-12 col-sm-12 col-12" id = "big-table">
+<button type = "submite" class = "btn btn-primary btn-block" style = "align-center" onclick= "saveCourse('BISC 110: 01');" id = "ssButtonText">Add to Saved Courses</button>
+</div>
+
+<script>
+    
+    function saveCourse(className) {
+        var c = confirm("Do you want to save this course?" + "\n" + className);
+        if (c==true){
+            var oldCourses = window.sessionStorage.getItem("savedCourses");
+            var savedCourses = oldCourses.slice(0);
+            savedCourses = savedCourses + "BISC 110-01 | MR 8:30-9:50 | G. Mendel";
+            window.sessionStorage.setItem("savedCourses", savedCourses);
+            alert("You have saved this course." + "\n\nYou can see your Saved Courses on the Semester Schedule and Registration pages.")
+        }
+    }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

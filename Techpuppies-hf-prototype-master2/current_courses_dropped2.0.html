@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style2.0.css">
+  <link rel="stylesheet" href="style2.2.0.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-lg navbar-light" id = "navigation-background">
+        <a class="navbar-brand" id="navigationText" href="Home2.0.html" >Wellesley Registration</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="Home2.0.html" id = "navigationText">Information<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="planning_page2.0.html" id = "navigationText">Planning</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="registration2.0.html" id = "navigationText">Registration</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id = "navigationText">Search</button>
+            </form>
+            <div class="btn-toolbar">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id = "navigationText">Log In</button>
+            </div>
+          </div>
+      </nav>
+
+<br>
+
+  <h1 id="page-header">Current Registration</h1>
+  <br>
+
+
+
+<div class="container">
+  <h4 id="page-header">Classes Currently Enrolled in:</h4>           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Course Title</th>
+        <th>Meeting Time</th>
+        <th>Instructor</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr> 
+        <td>BISC 110-01 Exploration of Organismal Biology with Laboratory</td>
+        <td>MR 8:30 - 9:50</td>
+        <td>G.Mendel</td>
+        <td><div class="checkbox">
+      			<label><input type="checkbox" value=""></label>
+    		</div>
+    	</td>
+      </tr>
+      <tr>
+        <td>BISC 110-L01 Laboratory for BISC 110 and BISC 112</td>
+        <td>M 6:30 - 9:30</td>
+        <td>G.Mendel</td>
+        <td><div class="checkbox">
+      			<label><input type="checkbox" value=""></label>
+    		</div>
+        </td>
+      </tr>
+      <tr>
+        <td>MATH 115-01 Calculus I</td>
+        <td>TWF 8:30 - 9:50</td>
+        <td>R.Franklin</td>
+        <td><div class="checkbox">
+      			<label><input type="checkbox" value=""></label>
+    		</div>
+        </td>
+      </tr>
+      <tr>
+        <td>HIST 277-01 China and America</td>
+        <td>TF 9:55 - 11:00</td>
+        <td>A.Lincoln</td>
+        <td><div class="checkbox">
+      			<label><input type="checkbox" value=""></label>
+    		</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="Button_Text">Drop Course</button>
+
+</div>
+
+
+</body>
+</html>
