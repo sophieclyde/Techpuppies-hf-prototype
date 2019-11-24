@@ -220,10 +220,18 @@
     <tr id = "saved-courses-stripe">
       <th id = "tableText">Preferred Schedule</th>
       <th>Add</th>
+      <td id = "saved-courses-checkbox">
+        <form>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('pos1').innerHTML); addCourse(document.getElementById('pos2').innerHTML); addCourse(document.getElementById('pos3').innerHTML); addCourse(document.getElementById('pos4').innerHTML); addCourse(document.getElementById('pos5').innerHTML);">
+            </div>
+        </form>
+       </td>
     </tr>
   </thead>
   <tr>
     <td id = "pos1"></td>
+    <td></td>
     <td>
       <form>
         <div class="form-check">
@@ -234,6 +242,7 @@
   </tr>
   <tr>
     <td id = "pos2"></td>
+    <td></td>
     <td>
       <form>
         <div class="form-check">
@@ -244,6 +253,7 @@
   </tr>
   <tr>
     <td id = "pos3"></td>
+    <td></td>
     <td>
       <form>
         <div class="form-check">
@@ -254,6 +264,7 @@
   </tr>
   <tr>
     <td id = "pos4"></td>
+    <td></td>
     <td>
       <form>
         <form>
@@ -265,6 +276,7 @@
   </tr>
   <tr>
     <td id = "pos5"></td>
+    <td></td>
     <td>
       <form>
         <div class="form-check">
@@ -281,60 +293,65 @@
   <thead>
     <tr id = "saved-courses-stripe">
       <th id = "tableText">Saved Courses</th>
+      <th></th>
       <th>Add</th>
     </tr>
   </thead>
   <tr>
     <td id = "sav1"></td>
-    <td>
-      <form>
-        <form>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav1').innerHTML)">
-          </div>
-        </form>
-    </td>
+      <td></td>
+      <td>
+          <form>
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav1').innerHTML)">
+              </div>
+          </form>
+      </td>
   </tr>
   <tr>
     <td id = "sav2"></td>
-    <td>
-      <form>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav2').innerHTML)">
-        </div>
-      </form>
-    </td>
+      <td></td>
+      <td>
+          <form>
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav2').innerHTML)">
+              </div>
+          </form>
+      </td>
   </tr>
     <tr>
-    <td id = "sav3"></td>
-    <td>
-      <form>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav3').innerHTML)">
-        </div>
-      </form>
-    </td>
-  </tr>
+        <td id = "sav3"></td>
+        <td></td>
+        <td>
+            <form>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav3').innerHTML)">
+                </div>
+            </form>
+        </td>
+    </tr>
     <tr>
-    <td id = "sav4"></td>
-    <td>
-      <form>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav4').innerHTML)">
-        </div>
-      </form>
-    </td>
-  </tr>
+        <td id = "sav4"></td>
+        <td></td>
+        <td>
+            <form>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav4').innerHTML)">
+                </div>
+            </form>
+        </td>
+    </tr>
     <tr>
-    <td id = "sav5"></td>
-    <td>
-      <form>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav5').innerHTML)">
-        </div>
-      </form>
-    </td>
-  </tr>
+        <td id = "sav5"></td>
+        <td></td>
+        <td>
+            <form>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="materialUnchecked" onclick="addCourse(document.getElementById('sav5').innerHTML)">
+                </div>
+            </form>
+        </td>
+    </tr>
 </table>
 </div>
 
