@@ -1,6 +1,6 @@
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #0d47a1 !important;
-    border-color: #0d47a1 !important;
+    background-color: #5472D3 !important;
+    border-color: #5472D3 !important;
 }
 
 #navText {
@@ -67,7 +67,7 @@ a.active {
 
 .table {
    margin: auto;
-   width: 50% 
+   width: 70% 
 }
 
 .popup {

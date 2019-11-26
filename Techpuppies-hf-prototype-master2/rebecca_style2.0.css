@@ -109,11 +109,14 @@
 }
 
 .course-browser-stripe{
-  background-color:#90caf9;
+  background-color:#BBB7F7;
 }
-#saved-courses-stripe{
-  background-color: #90caf9;
+
+#saved-courses-color{
+  background-color: #BBB7F7;
+  border: solid black
 }
+
 
 .dropdown-center {
   text-align: center;
